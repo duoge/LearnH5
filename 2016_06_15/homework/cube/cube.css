@@ -1,0 +1,55 @@
+div{
+    width: 200px;
+    height: 200px;
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    line-height: 200px;
+}
+#divCube1{
+    background-color: red;
+    transform:rotateY(180deg) translateZ(100px);
+
+}
+#divCube2{
+    background-color: #0dacee;
+    transform: rotateY(270deg) translateZ(100px);
+}
+#divCube3{
+    background-color: #27cb01;
+    transform: rotateY(90deg) translateZ(100px);
+}
+#divCube4{
+    background-color: yellow;
+    transform: rotateX(90deg) translateZ(100px);
+}
+#divCube5{
+    background-color: #16ffee;
+    transform: rotateX(270deg) translateZ(100px);
+ }
+#divCube6{
+    background-color: #b417c7;
+    transform:  translateZ(100px) ;
+}
+
+@keyframes cube {
+    from{
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    to{
+        transform: perspective(1000px) rotateX(1800deg) rotateY(1431deg) rotateZ(1134deg);
+    }
+}
+#divCube{
+    position: relative;
+    left:500px;
+    top:200px;
+    transform-style: preserve-3d;
+    animation: cube;
+    animation-duration: 20s;
+}
+#divCube:hover{
+    animation: cube;
+    animation-duration: 20s;
+}

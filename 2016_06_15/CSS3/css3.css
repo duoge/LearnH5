@@ -1,0 +1,17 @@
+
+
+/*transition过渡时间*/
+#circle {
+    background-color: #fedcba;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: width 1s,height 1s,background-color 1s;//过渡时间；
+}
+#circle:hover{
+    width: 400px;
+    height:400px;
+    background-color: #abcdef;
+}
+
+/*translate*/

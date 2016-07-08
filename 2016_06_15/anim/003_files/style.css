@@ -1,0 +1,77 @@
+@keyframes anim_a_over {
+    from {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    to {
+        transform: perspective(1000px) rotateY(180deg);
+    }
+}
+
+@keyframes anim_a_back {
+    from {
+        transform: perspective(1000px) rotateY(180deg);
+    }
+    to {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+}
+
+@keyframes anim_b_over {
+    from {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    to {
+        transform: perspective(1000px) rotateY(-180deg);
+    }
+}
+
+@keyframes anim_b_back {
+    from {
+        transform: perspective(1000px) rotateY(-180deg);
+    }
+    to {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+}
+
+body {
+    background-color: black;
+}
+
+.card_container {
+    float: left;
+    width: 204px;
+    height: 204px;
+    padding: 2px 2px;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+}
+
+.card_page {
+    position: absolute;
+    backface-visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+.card_b {
+    animation-name: anim_b_over;
+    animation-duration: 1s;
+}
+
+.card_a {
+    animation-duration: 1s;
+    animation-name: anim_a_back;
+}
+
+.card_a_hovered {
+    animation-duration: 1s;
+    animation-name: anim_a_over;
+}
+
+.card_b_hovered {
+    animation-name: anim_b_back;
+    animation-duration: 1s;
+}

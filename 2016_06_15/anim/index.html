@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+        @keyframes animTo0 {
+            from{
+                transform: perspective(1000px) rotateY(180deg);
+            }
+            to{
+                transform: perspective(1000px) rotateY(0deg);
+            }
+        }
+       @keyframes animTo180 {
+            from{
+                transform: perspective(1000px) rotateY(0deg);
+            }
+            to{
+                transform: perspective(1000px) rotateY(180deg);
+            }
+        }
+        @keyframes animTo-180 {
+            from{
+                transform: perspective(1000px) rotateY(0deg);
+            }
+            to{
+                transform: perspective(1000px) rotateY(-180deg);
+            }
+        }
+        @keyframes animTo {
+            from{
+                transform: perspective(1000px) rotateY(-180deg);
+            }
+            to{
+                transform: perspective(1000px) rotateY(0deg);
+            }
+        }
+       #img1{
+            animation: animTo0;
+            animation-duration: 2s;
+            width:200px;
+            height: 200px;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+        #img1:hover{
+            animation: animTo180;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            backface-visibility: hidden;
+        }
+        #img2{
+            width: 200px;
+            height: 200px;
+            animation: animTo-180;
+            animation-duration: 2s;
+            backface-visibility: hidden;
+        }
+
+        /*#img2:hover{
+            animation: animTo;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            backface-visibility: hidden;
+        }*/
+
+    </style>
+</head>
+<body>
+<div id="div1">
+    <img src="001.jpg" alt="" id="img1">
+    <img src="002.jpg" alt="" id="img2">
+</div>
+</body>
+</html>
